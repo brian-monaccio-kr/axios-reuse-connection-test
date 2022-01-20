@@ -4,10 +4,11 @@ const http = require('http');
 const https = require('https');
 
 const axiosInst = axios.create({
-  baseURL: 'http://DESKTOP-0L2O4FC:10500',
+  baseURL: 'http://localhost:10500',
   timeout: 2000,
   httpAgent: new http.Agent({ keepAlive: true }),
   httpsAgent: new https.Agent({ keepAlive: true }),
+  proxy: false
 });
 
 let cnt = 0;
